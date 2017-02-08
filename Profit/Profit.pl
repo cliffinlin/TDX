@@ -35,7 +35,7 @@ foreach my $Period (@MAPeriod)
     push(@LineArray, "\r");
     
     push(@LineArray, "EMA_PERIOD_$i:=$Period;");
-    push(@LineArray, "EXP_MA_$i:=EMA(C,EMA_PERIOD_$i);");    
+    push(@LineArray, "EXP_MA_$i:=EMA((HIGH+LOW)/2,EMA_PERIOD_$i);");    
     push(@LineArray, "\r");
     
     push(@LineArray, "BUY_$i:=(REF(EXP_MA_$i,2)>REF(EXP_MA_$i,1)) AND (EXP_MA_$i>REF(EXP_MA_$i,1));");
