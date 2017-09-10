@@ -1,0 +1,6 @@
+A0:="MACD.MACD#WEEK";
+A1:=REF(A0,1);
+A2:=REF(A0,2);
+DIF:="MACD.DIF#WEEK";
+DEA:="MACD.DEA#WEEK";
+XG:(DIF<0)&&(DEA<0)&&(A0<0)&&(A1<0)&&(A2<0)&&(A1<A0)&&(A1<A2);
